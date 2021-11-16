@@ -3,6 +3,12 @@ import icons from "url:../img/icons.svg";
 export default class View {
   _data;
 
+  /**
+   *
+   * @param {Object | Object[]} data recipe data
+   * @param {boolean} [render = true] if false it will just return a string instead of rendering it
+   * @returns {undefined | string} if render is false it will just return a string
+   */
   render(data, render = true) {
     if (!data || (Array.isArray(data) && data.length === 0))
       return this.renderError();
