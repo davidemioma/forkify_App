@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/sass/main.scss" />
+    <script type="module" defer src="./js/script.js"></script>
+    <title>forkify // Search over 1,000,000 recipes</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <img class="header_logo" src="./img/logo.png" alt="" />
+        <form class="search">
+          <input
+            type="text"
+            class="search_field"
+            placeholder="Search over 1,000,000 recipes..."
+          />
+
+          <button class="btn search_btn">
+            <svg class="search_icon">
+              <use href="./img/icons.svg#icon-search"></use>
+            </svg>
+            <span>Bookmarks</span>
+          </button>
+        </form>
+
+        <nav class="nav">
+          <ul class="nav_list">
+            <li class="nav_item">
+              <button class="nav_btn nav_btn-add-recipe">
+                <svg class="nav_icon">
+                  <use href="./img/icons.svg#icon-edit"></use>
+                </svg>
+                <span>Add recipe</span>
+              </button>
+            </li>
+
+            <li class="nav_item">
+              <button class="nav_btn nav_btn-bookmarks">
+                <svg class="nav_icon">
+                  <use href="./img/icons.svg#icon-bookmark"></use>
+                </svg>
+                <span>Bookmarks</span>
+              </button>
+
+              <div class="bookmarks">
+                <ul class="bookmarks_list">
+                  <div class="message">
+                    <div>
+                      <svg>
+                        <use href="./img/icons.svg#icon-smile"></use>
+                      </svg>
+                    </div>
+                    <p>
+                      No bookmarks yet. Find a nice recipe and bookmark it :)
+                    </p>
+                  </div>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <div class="search-results">
+        <ul class="results"></ul>
+
+        <div class="pagination"></div>
+
+        <p class="copyright">
+          &copy; Copyright by
+          <a
+            class="twitter_link"
+            target="_blank"
+            href="https://twitter.com/jonasschmedtman"
+            >Jonas Schmedtmann</a
+          >. Use for learning or your portfolio. Don't use to teach. Don't claim
+          as your own.
+        </p>
+      </div>
+
+      <div class="recipe">
+        <div class="message">
+          <div>
+            <svg>
+              <use href="./img/icons.svg#icon-smile"></use>
+            </svg>
+          </div>
+          <p>Start by searching for a recipe or an ingredient. Have fun!</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="overlay hidden"></div>
+
+    <div class="add_recipe-window hidden">
+      <button class="btn_close-modal">&times;</button>
+
+      <form action="" class="upload">
+        <div class="upload_column">
+          <h3 class="upload_heading">Recipe data</h3>
+
+          <label>Title</label>
+          <input value="TEST23" required name="title" type="text" />
+
+          <label>URL</label>
+          <input value="TEST23" required name="sourceUrl" type="text" />
+
+          <label>Image URL</label>
+          <input value="TEST23" required name="image" type="text" />
+
+          <label>Publisher</label>
+          <input value="TEST23" required name="publisher" type="text" />
+
+          <label>Prep time</label>
+          <input value="23" required name="cookingTime" type="number" />
+
+          <label>Servings</label>
+          <input value="23" required name="servings" type="number" />
+        </div>
+
+        <div class="upload_column">
+          <h3 class="upload_heading">Ingredients</h3>
+
+          <label>Ingredient 1</label>
+          <input
+            value="0.5,kg,Rice"
+            type="text"
+            required
+            name="ingredient-1"
+            placeholder="Format: 'Quantity,Unit,Description'"
+          />
+
+          <label>Ingredient 2</label>
+          <input
+            value="1,,Avocado"
+            type="text"
+            name="ingredient-2"
+            placeholder="Format: 'Quantity,Unit,Description'"
+          />
+
+          <label>Ingredient 3</label>
+          <input
+            value=",,salt"
+            type="text"
+            name="ingredient-3"
+            placeholder="Format: 'Quantity,Unit,Description'"
+          />
+
+          <label>Ingredient 4</label>
+          <input
+            type="text"
+            name="ingredient-4"
+            placeholder="Format: 'Quantity,Unit,Description'"
+          />
+
+          <label>Ingredient 5</label>
+          <input
+            type="text"
+            name="ingredient-5"
+            placeholder="Format: 'Quantity,Unit,Description'"
+          />
+
+          <label>Ingredient 6</label>
+          <input
+            type="text"
+            name="ingredient-6"
+            placeholder="Format: 'Quantity,Unit,Description'"
+          />
+        </div>
+
+        <button class="btn upload_btn">
+          <svg>
+            <use href="./img/icons.svg#icon-upload-cloud"></use>
+          </svg>
+          <span>Upload</span>
+        </button>
+      </form>
+    </div>
+  </body>
+</html>
